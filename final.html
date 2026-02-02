@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</p>
+<p class="p1">&lt;title&gt;Will you be my Valentine?&lt;/title&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"&gt;&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1">body {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>min-height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background: linear-gradient(135deg, #ffd6e7, #ffeef6);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-family: system-ui, sans-serif;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.card {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background: #ffffffdd;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius: 22px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width: min(360px, 90vw);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>box-shadow: 0 20px 50px rgba(0,0,0,.25);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.card img {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-bottom: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>box-shadow: 0 12px 30px rgba(0,0,0,.3);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">h1 {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size: 28px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-bottom: 20px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.buttons {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>height: 120px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">button {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>top: 40px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding: 14px 22px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius: 999px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>cursor: pointer;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">#yes {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>left: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background: #ff3b7a;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color: white;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">#no {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>right: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background: #e5e7eb;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.result {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-top: 20px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.result h2 {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size: 32px;</p>
+<p class="p1">}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="card"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- YOUR IMAGE --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;img src="couple.jpg" alt="Us ❤️"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1&gt;Kushum, will you be my Valentine? 💖&lt;/h1&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="buttons" id="zone"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button id="yes"&gt;Yes&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button id="no"&gt;No&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="result" id="result"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;YAY! 🎉💖&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;I knew you’d say yes 😌&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">const yes = document.getElementById("yes");</p>
+<p class="p1">const no = document.getElementById("no");</p>
+<p class="p1">const zone = document.getElementById("zone");</p>
+<p class="p1">const result = document.getElementById("result");</p>
+<p class="p2"><br></p>
+<p class="p1">no.addEventListener("mouseenter", () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const x = Math.random() * (zone.clientWidth - no.offsetWidth);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const y = Math.random() * 80;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>no.style.left = x + "px";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>no.style.top = y + "px";</p>
+<p class="p1">});</p>
+<p class="p2"><br></p>
+<p class="p1">yes.addEventListener("click", () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>zone.style.display = "none";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>result.style.display = "block";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>confetti({</p>
+<p class="p1"><span class="Apple-converted-space">    </span>particleCount: 250,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>spread: 120,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>origin: { y: 0.6 }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1">});</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
